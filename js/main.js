@@ -2,6 +2,60 @@
 
 // Wait for the DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
+    // Audio initialization and controls
+    const backgroundAudio = document.getElementById('background-audio');
+    const audioToggle = document.getElementById('audio-toggle');
+    let audioInitialized = false;
+    
+    // Function to start playing audio with user interaction
+    function initAudio() {
+        if (!audioInitialized) {
+            backgroundAudio.volume = 0.3; // Set a comfortable default volume
+            backgroundAudio.play().then(() => {
+                audioInitialized = true;
+                audioToggle.classList.add('active');
+                document.body.classList.add('audio-playing');
+            }).catch((error) => {
+                console.log('Audio playback failed:', error);
+                audioToggle.classList.remove('active');
+                document.body.classList.remove('audio-playing');
+            });
+        }
+    }
+    
+    // Initialize audio on first user interaction with the page
+    function setupAutoplay() {
+        // Try to play audio on initial page click
+        document.body.addEventListener('click', function bodyClickHandler() {
+            initAudio();
+            document.body.removeEventListener('click', bodyClickHandler);
+        }, { once: true });
+        
+        // Also try to play on scroll
+        window.addEventListener('scroll', function scrollHandler() {
+            initAudio();
+            window.removeEventListener('scroll', scrollHandler);
+        }, { once: true });
+    }
+    
+    // Setup the audio toggle button
+    if (audioToggle && backgroundAudio) {
+        audioToggle.addEventListener('click', function() {
+            if (backgroundAudio.paused) {
+                backgroundAudio.play();
+                audioToggle.classList.add('active');
+                document.body.classList.add('audio-playing');
+            } else {
+                backgroundAudio.pause();
+                audioToggle.classList.remove('active');
+                document.body.classList.remove('audio-playing');
+            }
+        });
+        
+        // Setup autoplay after a short delay to not interfere with page load
+        setTimeout(setupAutoplay, 1000);
+    }
+
     // Initialize loading screen
     setTimeout(function() {
         document.querySelector('.loading').style.opacity = '0';
