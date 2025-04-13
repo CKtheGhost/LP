@@ -19,6 +19,17 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <!-- Intro Video Splash Screen -->
+    <div class="intro-video-container">
+        <video id="intro-video" muted>
+            <source src="IMG_2067.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="skip-intro">
+            <button id="skip-intro-button">Skip Intro</button>
+        </div>
+    </div>
+
     <!-- Background Effects -->
     <div id="particles-js"></div>
     <div class="glow-effect">
@@ -163,6 +174,29 @@
                     </div>
                 </div>
                 
+                <!-- Enhanced Early Access Timer -->
+                <div class="early-access-timer">
+                    <div class="timer-label">Early Access Closing In:</div>
+                    <div class="countdown">
+                        <div class="countdown-item">
+                            <div class="countdown-value" id="days">14</div>
+                            <div class="countdown-label">Days</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-value" id="hours">22</div>
+                            <div class="countdown-label">Hours</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-value" id="minutes">36</div>
+                            <div class="countdown-label">Minutes</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-value" id="seconds">42</div>
+                            <div class="countdown-label">Seconds</div>
+                        </div>
+                    </div>
+                </div>
+                
                 <div class="hero-stats">
                     <div class="stat-item">
                         <div class="stat-value">99.9998%</div>
@@ -186,6 +220,109 @@
                 <div class="scroll-indicator">
                     <span>Scroll Down</span>
                     <div class="arrow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Social Proof Section -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="trust-indicators">
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <svg width="36" height="36" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 464c-118.664 0-216-96.055-216-216 0-118.663 96.055-216 216-216 118.664 0 216 96.055 216 216 0 118.664-96.055 216-216 216zm50.667-292.888c-5.551-7.825-15.951-14.669-32.078-14.669-20.651 0-35.296 12.63-35.296 30.732 0 17.282 12.532 25.254 30.995 32.227 11.372 4.333 15.212 7.346 15.212 12.481 0 4.96-4.736 8.723-14.636 8.723-10.898 0-19.234-4.541-24.581-10.83-1.225-1.44-3.305-1.618-4.74-.392l-9.763 8.28c-1.434 1.225-1.618 3.306-.391 4.74 8.491 9.986 21.887 15.667 38.57 15.667 22.489 0 37.922-11.881 37.922-31.109 0-16.445-11.558-25.073-29.703-31.851-11.939-4.407-16.446-7.346-16.446-12.026 0-4.333 4.597-8.666 13.694-8.666 9.199 0 15.23 4.332 19.035 9.64.868 1.223 2.512 1.56 3.778.845l9.899-5.583c1.41-.791 1.886-2.58 1.041-3.931z"/>
+                        </svg>
+                    </div>
+                    <div class="trust-number">$1.2B+</div>
+                    <div class="trust-label">Assets Under Management</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <svg width="36" height="36" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                            <path d="M96 224c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm448 0c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm32 32h-64c-17.6 0-33.5 7.1-45.1 18.6 40.3 22.1 68.9 62 75.1 109.4h66c17.7 0 32-14.3 32-32v-32c0-35.3-28.7-64-64-64zm-256 0h-128c-35.3 0-64 28.7-64 64v32c0 17.7 14.3 32 32 32h238.1c-3.2-10.8-5.1-22.1-5.1-34 0-48.6 26.2-91.1 65.4-113.8-11.1-9.5-26.3-16.2-42.4-16.2zm128 96c0-53-43-96-96-96s-96 43-96 96 43 96 96 96 96-43 96-96zm-128-64c0-17.7 14.3-32 32-32s32 14.3 32 32-14.3 32-32 32-32-14.3-32-32z"/>
+                        </svg>
+                    </div>
+                    <div class="trust-number">50,000+</div>
+                    <div class="trust-label">Institutional Clients</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <svg width="36" height="36" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path d="M505.05 19.1a15.89 15.89 0 0 0-12.2-12.2C460.65 0 435.46 0 410.36 0c-103.2 0-165.1 55.2-211.29 128H94.87A48 48 0 0 0 52 154.49l-49.42 98.8A24 24 0 0 0 24.07 288h103.77l-22.47 22.47a32 32 0 0 0 0 45.25l50.9 50.91a32 32 0 0 0 45.26 0L224 384.16V488a24 24 0 0 0 34.7 21.49l98.7-49.39a47.91 47.91 0 0 0 26.5-42.9V312.79c72.59-46.3 128-108.4 128-211.09.1-25.2.1-50.4-6.85-82.6zM384 168a40 40 0 1 1 40-40 40 40 0 0 1-40 40z"/>
+                        </svg>
+                    </div>
+                    <div class="trust-number">99.9998%</div>
+                    <div class="trust-label">Success Rate</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <svg width="36" height="36" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path d="M32 448c0 17.7 14.3 32 32 32h384c17.7 0 32-14.3 32-32V160H32v288zm160-212c0-6.6 5.4-12 12-12h104c6.6 0 12 5.4 12 12v8c0 6.6-5.4 12-12 12H204c-6.6 0-12-5.4-12-12v-8zM480 32H32C14.3 32 0 46.3 0 64v48c0 8.8 7.2 16 16 16h480c8.8 0 16-7.2 16-16V64c0-17.7-14.3-32-32-32z"/>
+                        </svg>
+                    </div>
+                    <div class="trust-number">100+</div>
+                    <div class="trust-label">Networks Supported</div>
+                </div>
+            </div>
+            
+            <div class="testimonials-slider">
+                <div class="testimonial-slide active">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote" data-enhanced="true">"PROSPERA's AI-driven approach has transformed our investment strategy. The returns have been consistently impressive, and the platform is incredibly intuitive."</div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">AT</div>
+                            <div class="author-info">
+                                <div class="author-name">Alex Thompson</div>
+                                <div class="author-position">Managing Director, Quantum Capital</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote" data-enhanced="true">"The Omnimind_Nexus AI system detected market opportunities our team never would have identified. The cross-chain functionality allows us to maximize returns across multiple networks."</div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">SC</div>
+                            <div class="author-info">
+                                <div class="author-name">Sarah Chen</div>
+                                <div class="author-position">Head of Investments, Future Ventures</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote" data-enhanced="true">"We've integrated PROSPERA into our institutional investment framework with outstanding results. The security protocols are enterprise-grade and the AI performance is unmatched."</div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">MR</div>
+                            <div class="author-info">
+                                <div class="author-name">Michael Ramos</div>
+                                <div class="author-position">CTO, Blockchain Ventures</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-controls">
+                    <button class="testimonial-prev" aria-label="Previous testimonial">
+                        <svg width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                            <path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
+                        </svg>
+                    </button>
+                    <div class="testimonial-dots">
+                        <button class="dot active" data-index="0" aria-label="Testimonial 1"></button>
+                        <button class="dot" data-index="1" aria-label="Testimonial 2"></button>
+                        <button class="dot" data-index="2" aria-label="Testimonial 3"></button>
+                    </div>
+                    <button class="testimonial-next" aria-label="Next testimonial">
+                        <svg width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                            <path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/>
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
@@ -372,24 +509,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="feature-content">
-                        <span class="feature-badge">Cross-Chain</span>
-                        <h3>Omnichain Infrastructure</h3>
-                        <p>Our platform operates seamlessly across multiple blockchain networks through our partnership with Via Labs, providing unified access and enhanced liquidity while maintaining specialized functionality for each supported chain.</p>
-                    </div>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <div class="feature-icon-wrap">
-                            <div class="feature-icon-inner">
-                                <svg width="36" height="36" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                    <path d="M0 128C0 92.7 28.7 64 64 64H320c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128zM559.1 99.8c10.4 5.6 16.9 16.4 16.9 28.2V384c0 11.8-6.5 22.6-16.9 28.2s-23 5-32.9-1.6l-96-64L416 336V176l14.2-10.6 96-64c9.8-6.5 22.4-7.2 32.9-1.6z"/>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="feature-content">
+                     <div class="feature-content">
                         <span class="feature-badge">Community</span>
                         <h3>Strategic Partnerships</h3>
                         <p>Our platform integrates with multiple established Web3 partners including Retardio Casino, Fu Studios, SimpFi, and other key communities, creating a comprehensive ecosystem that drives user adoption and engagement.</p>
@@ -401,7 +521,7 @@
                         <div class="feature-icon-wrap">
                             <div class="feature-icon-inner">
                                 <svg width="36" height="36" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                    <path d="M108.5 66.4c.3 77.3 45.5 142.8 108.5 166.4-18.3-10.6-37.5-24.3-55.4-41.6C130.8 163.2 107.5 118 108.5 66.4zM256 128c-61.9 0-112 50.1-112 112 0 24.7 8 47.5 21.7 65.9 3.8-13.3 9.3-26.3 16.5-38.6 0-24.7 20.1-44.7 44.7-44.7 1.4 0 2.8 .1 4.1 .2 5.4-15.5 12.7-30.3 21.6-43.9 1.1-.2 2.2-.3 3.4-.3 8.4 0 15.6 5.3 18.3 12.8 2.4-.7 4.8-1.4 7.3-1.9-1.3-3.5-2-7.2-2-11.1 0-17.7 14.3-32 32-32s32 14.3 32 32c0 3.2-.5 6.4-1.4 9.3 12.2 2.3 23.7 6.1 34.4 11.2 3.4-6.3 5-13.6 5-20.5 0-24.8-20.1-44.9-44.9-44.9-3.7 0-7.3 .5-10.8 1.3C296.5 111.3 266.3 96 232.5 96c-4.1 0-8.1 .2-12.6 .5-1.5-5.5-2.2-11.2-2.2-17C217.7 35.7 251.6 0 305.3 0c30.5 0 57.8 13.5 75.4 35.6C372.1 31 361.3 28 349.8 28c-23.6 0-43.4 16.8-47.9 39.2C309.9 82.3 317.1 95.3 327 105.7c5.3-12.1 12.9-22.7 22-31.5 19.1-18.6 44.5-29.8 72.7-30.2 1.7 7.3 2.7 14.8 2.7 22.6 0 15.7-3.5 30.5-9.8 43.8 7.5 4.5 14.5 9.7 20.9 15.8 11.3-18.1 17.8-39.4 17.8-62.2 0-64.9-52.6-117.5-117.4-117.5-46.4 0-86.5 26.8-105.6 65.6C221.4 6.1 206.1 0 189.4 0 102.3 0 31.5 80.4 31.5 178.8c0 28.8 7.1 56.1 19.6 80.2-4.3-8.2-7.6-17.1-9.5-26.7-11.9-32.5-4.5-70.8 23.4-122.4C100.2 57.5 143.1 26.8 190.9 19.1c-1.1 3.8-1.6 7.9-1.6 12.1 0 24.9 20.1 45 45 45 32 0 58.7-22.9 64.3-53.3 8.5 6.8 15.2 15.8 19.3 26C326.6 29 344.6 15 365.9 15c15.3 0 29.1 6.2 39 16.3C429.5 50.3 448 81.5 448 117c0 35.3-20.8 65.9-51 80.1-11.7-9.1-25.4-16.2-40.6-20.5 1-4.9 1.6-9.9 1.6-15.1 0-41.9-33.8-75.7-75.7-75.7-2.3 0-4.6 .1-6.9 .3C263.1 69.4 249.3 56 232.5 56c-24.2 0-43.8 19.6-43.8 43.8 0 14.3 6.8 26.9 17.4 34.9-23.7 16.3-41.6 40.2-49.8 68.4-12.8 1.3-25.4 4.8-36.9 10.3C90.7 164.9 76.2 113.9 80.1 59.1c62.9 0 120.3 25.8 162.1 67.6-18.3-10.6-37.5-24.3-55.4-41.6C155.9 54.2 103.2 32.2 46.3 38c15.9-15.4 34.6-27.6 55.5-35.5 21.8 15 42.4 37.1 59.5 66.3-3.5-8.4-7.3-16.4-11.5-24C169.5 28.1 190.9 16 214.3 16c19.3 0 36.6 8.8 48 22.6 0 0-.3 0-.4 0-46.2 0-83.7 37.6-83.7 83.8-10.5 7.4-19.5 16.9-26.4 28C152.1 140.4 154 128 154 115.1C154 51.6 204.4 0 266.8 0c23 0 43.9 7.2 61.2 19.5C324.8 7.4 340.8 0 358.7 0c57.9 0 104.9 47.5 104.9 106.1 0 35.5-17.1 67-43.3 86.7-18.7-16.7-41.5-28.1-66.8-32.5 22.4-9 38.2-30.8 38.2-56.3 0-33.6-27.1-60.7-60.7-60.7-14.5 0-27.7 5.1-38.1 13.6C286.3 33.2 265.7 17 241.7 13c.7-4.3 1.1-8.8 1.1-13.4 0 61.5-43.7 100.3-97.9 123 12-2.2 24.3-3.4 36.9-3.4C225.8 119.2 243.5 122 259.2 128zM256 160c-44.2 0-80 35.8-80 80s35.8 80 80 80c6.9 0 13.5-1 19.8-2.6C290.4 281.5 320 226.2 320 160.9c0-.3 0-.6 0-.9C304.4 163.6 281 160 256 160zM446.7 205.7c8.6 12.3 13.3 27 13.3 42.3 0 40.7-33 73.7-73.7 73.7-6.1 0-12-1-17.5-2.6 35.3-71.7 59.5-155.2 59.5-240.5c0-5.5-.2-11-.7-16.5 2.9-.2 5.9-.3 8.8-.3 75.2 0 136 60.9 136 136c0 71.8-55.6 130.8-125.9 136c-2.7-6.1-6.2-11.8-10.5-16.9 2.6 0 5.1 .1 7.7 .1C512.3 317.2 512 371 488.3 414.6c-3.2 5.8-6.6 11.3-10.2 16.5-90.5-20.3-181.3-82.3-233.4-178.7 5.4 1.1 11 1.6 16.8 1.6 46.6 0 84.2-37.7 84.2-84.2 0-36.2-22.8-67.1-54.8-79.1-1.5 12-2.9 23.7-2.9 35.3 0 28.9 5.5 56.5 15.6 82 2.2-.1 4.3-.3 6.5-.3 58.8 0 106.6 47.8 106.6 106.6 0 9.3-1.2 18.4-3.5 27-23.7-1.3-44.3-14.6-55.3-34.3 9.9-27.1 15.2-54.9 15.2-82.4 0-82.4-46.4-162.2-109-232.6 1.1-2.6 2-5.4 2.5-8.4 21.4 7.1 39.9 20.8 53.2 39C433.8 32.4 414.7 48 403.2 69.6c-1.6-12.3-5-24.1-10.1-34.8C427.5 55.3 449.3 92.3 449.3 135c0 33-14.3 62.7-37.1 83.2 13 11.4 21 28.3 21 47 0 7.4-1.3 14.6-3.7 21.2-4-9.4-9-18.5-14.8-27.3 3.4 0 6.9 .2 10.3 .7 3.9-13.8 6-28.2 6.1-42.8-9.4-7-16.9-16.5-21.3-27.4 8-8.6 16.4-16.7 25.1-24.3-6.6-7.2-14.2-13.5-22.6-18.6 10.3-29.5 13-65.2-2.5-108.2 49.6 56.9 92.1 135.3 118.9 229 5-21.9 7.7-44.7 7.7-68.2C536.3 46.5 446.4 0 341.8 0c-19.2 0-37.7 2.1-55.7 5.9C264.2 2 241 0 217.4 0 137.2 0 64 67.5 64 150.7c0 28.2 8.1 54.5 22.1 76.7 3.6-20.2 10.2-39.4 19.4-57.1-2.1-6.4-3.2-13.1-3.2-20.1 0-36 29.1-65.2 65.2-65.2 16.9 0 32.3 6.5 43.9 17C200.5 96.9 192 86.9 192 75.1c0-21.5 17.4-38.9 38.8-38.9 8.5 0 16.3 2.7 22.7 7.4-14.6 8.5-31.5 13.4-49.5 13.4 4.7 6.5 8.9 13.4 12.5 20.7C293.8 63 362.2 98.5 403.6 159.9c-4-6.7-7.8-13.5-11.2-20.5-46.8 21.8-78.7 67.4-83.2 119.7-2.9-.6-5.9-.9-9-.9-24.9 0-45 20.1-45 45 0 24.5 19.5 44.3 43.8 45 23.2 41 51.6 77.3 80.1 107.9C345.9 388.7 398.3 336 463.9 317.3c7.5 22.2 11.8 46 11.8 70.9 0 101.9-86.7 184.2-191.7 184.2-45.7 0-88-14.9-121.8-39.8-12.9 14.3-28.7 25.9-46.2 33.9C168.5 606.7 236.9 624 308.8 624c96.6 0 186.1-30.5 259.5-82.2C643.1 495.3 689 410.9 689 315.8c0-38.6-6.7-75.5-19.1-109.8-15.4 21-36.1 37.5-60.1 47C588.9 340.7 482.3 416 375.5 416c-57.1 0-112.7-7.7-161.3-21.9-59.1-16.4-97.8-39.8-97.8-66.1 0-28.2 45.1-53 115.1-68.8-4.3 7.5-6.7 16.2-6.7 25.5 0 28.4 23 51.4 51.4 51.4 10.2 0 19.6-3.1 27.6-8.2C326 365 352.1 395.8 381 423c-25.6 4.1-51.9 6.3-78.7 6.3-105.9 0-201.9-32.5-276.4-85.8C12.1 334.3 1.5 321.7-8 308.7c33.4 50.5 93.6 90.6 165.5 115.3-7.9-10.1-14.2-21.5-18.6-33.9 10.3-3.7 20.2-8.1 29.7-13.1 9.2 4.9 17.9 9.3 25.9 13.2-15.9-4.7-30.4-12.4-42.6-22.5-.6-1.1-1.1-2.3-1.7-3.4 10.4 6.4 21.1 11.9 32 16.7-7.1-10.4-12.9-21.6-17.3-33.5-6.4-17.6-8.8-36.7-6.7-56.5 1.9-17.7 7.3-35.7 16.8-54.1 6.8 15.2 16.7 28.6 29.3 39.1l0 0c-7.7 32-6.3 67.6 5.7 105.6C197.1.1 321.7 159.9 425.1 159.9c15.9 0 31.3-2.6 45.7-7.4 20.4 33.6 29.1 77.4 24.8 125.9-6.3 16.2-17.2 30.1-31.3 39.9 18.7-69.9-6.2-132.9-43.4-178.7 12.6 1.4 25.1 3.9 37.2 7.5zM195.1 140.6C180.3 149.5 169.7 164.7 166.9 182.7c-3.5 22.7 5.3 43.2 22.3 55.1-5.7 22-8.5 45.8-8.5 70.1 0 46.8 10.3 91 28.6 129.1-16.6-27.7-26.2-60.2-26.2-94.9C183.1 281.3 200.3 210.5 195.1 140.6zM248 432c-13.3 0-24-10.7-24-24s10.7-24 24-24 24 10.7 24 24-10.7 24-24 24z"/>
+                                    <path d="M108.5 66.4c.3 77.3 45.5 142.8 108.5 166.4-18.3-10.6-37.5-24.3-55.4-41.6C130.8 163.2 107.5 118 108.5 66.4zM256 128c-61.9 0-112 50.1-112 112 0 24.7 8 47.5 21.7 65.9 3.8-13.3 9.3-26.3 16.5-38.6 0-24.7 20.1-44.7 44.7-44.7 1.4 0 2.8 .1 4.1 .2 5.4-15.5 12.7-30.3 21.6-43.9 1.1-.2 2.2-.3 3.4-.3 8.4 0 15.6 5.3 18.3 12.8 2.4-.7 4.8-1.4 7.3-1.9-1.3-3.5-2-7.2-2-11.1 0-17.7 14.3-32 32-32s32 14.3 32 32c0 3.2-.5 6.4-1.4 9.3 12.2 2.3 23.7 6.1 34.4 11.2 3.4-6.3 5-13.6 5-20.5 0-24.8-20.1-44.9-44.9-44.9-3.7 0-7.3 .5-10.8 1.3C296.5 111.3 266.3 96 232.5 96c-4.1 0-8.1 .2-12.6 .5-1.5-5.5-2.2-11.2-2.2-17C217.7 35.7 251.6 0 305.3 0c30.5 0 57.8 13.5 75.4 35.6C372.1 31 361.3 28 349.8 28c-23.6 0-43.4 16.8-47.9 39.2C309.9 82.3 317.1 95.3 327 105.7c5.3-12.1 12.9-22.7 22-31.5 19.1-18.6 44.5-29.8 72.7-30.2 1.7 7.3 2.7 14.8 2.7 22.6 0 15.7-3.5 30.5-9.8 43.8 7.5 4.5 14.5 9.7 20.9 15.8 11.3-18.1 17.8-39.4 17.8-62.2 0-64.9-52.6-117.5-117.4-117.5-46.4 0-86.5 26.8-105.6 65.6C221.4 6.1 206.1 0 189.4 0 102.3 0 31.5 80.4 31.5 178.8c0 28.8 7.1 56.1 19.6 80.2-4.3-8.2-7.6-17.1-9.5-26.7-11.9-32.5-4.5-70.8 23.4-122.4C100.2 57.5 143.1 26.8 190.9 19.1c-1.1 3.8-1.6 7.9-1.6 12.1 0 24.9 20.1 45 45 45 32 0 58.7-22.9 64.3-53.3 8.5 6.8 15.2 15.8 19.3 26C326.6 29 344.6 15 365.9 15c15.3 0 29.1 6.2 39 16.3C429.5 50.3 448 81.5 448 117c0 35.3-20.8 65.9-51 80.1-11.7-9.1-25.4-16.2-40.6-20.5 1-4.9 1.6-9.9 1.6-15.1 0-41.9-33.8-75.7-75.7-75.7-2.3 0-4.6 .1-6.9 .3C263.1 69.4 249.3 56 232.5 56c-24.2 0-43.8 19.6-43.8 43.8 0 14.3 6.8 26.9 17.4 34.9-23.7 16.3-41.6 40.2-49.8 68.4-12.8 1.3-25.4 4.8-36.9 10.3C90.7 164.9 76.2 113.9 80.1 59.1c62.9 0 120.3 25.8 162.1 67.6-18.3-10.6-37.5-24.3-55.4-41.6C155.9 54.2 103.2 32.2 46.3 38c15.9-15.4 34.6-27.6 55.5-35.5 21.8 15 42.4 37.1 59.5 66.3-3.5-8.4-7.3-16.4-11.5-24C169.5 28.1 190.9 16 214.3 16c19.3 0 36.6 8.8 48 22.6 0 0-.3 0-.4 0-46.2 0-83.7 37.6-83.7 83.8-10.5 7.4-19.5 16.9-26.4 28C152.1 140.4 154 128 154 115.1C154 51.6 204.4 0 266.8 0c23 0 43.9 7.2 61.2 19.5C324.8 7.4 340.8 0 358.7 0c57.9 0 104.9 47.5 104.9 106.1 0 35.5-17.1 67-43.3 86.7-18.7-16.7-41.5-28.1-66.8-32.5 22.4-9 38.2-30.8 38.2-56.3 0-33.6-27.1-60.7-60.7-60.7-14.5 0-27.7 5.1-38.1 13.6C286.3 33.2 265.7 17 241.7 13c.7-4.3 1.1-8.8 1.1-13.4 0 61.5-43.7 100.3-97.9 123 12-2.2 24.3-3.4 36.9-3.4C225.8 119.2 243.5 122 259.2 128zM256 160c-44.2 0-80 35.8-80 80s35.8 80 80 80c6.9 0 13.5-1 19.8-2.6C290.4 281.5 320 226.2 320 160.9c0-.3 0-.6 0-.9C304.4 163.6 281 160 256 160z"/>
                                 </svg>
                             </div>
                         </div>
@@ -449,8 +569,6 @@
             </div>
         </div>
     </section>
-
-
 
     <!-- FAQ Section -->
     <section id="faq" class="faq">
@@ -604,22 +722,59 @@
                 <p class="section-subtitle">Join our exclusive waitlist to be among the first to experience PROSPERA's revolutionary AI-powered investment platform.</p>
             </div>
             
-            <div class="email-form">
-                <form id="early-access-form">
-                    <div class="form-group">
-                        <input type="email" class="form-control" placeholder="Enter your email address" required>
-                        <button type="submit" class="form-submit">Apply Now</button>
-                    </div>
-                    <div class="wallet-input">
-                        <span class="wallet-icon">
-                            <svg width="20" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                <path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V192c0-35.3-28.7-64-64-64H80c-8.8 0-16-7.2-16-16s7.2-16 16-16H448c17.7 0 32-14.3 32-32s-14.3-32-32-32H64zM416 272a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/>
-                            </svg>
-                        </span>
-                        <input type="text" class="form-control" placeholder="Enter your wallet address (optional)">
-                    </div>
-                    <p class="privacy-text">By submitting this form, you agree to our privacy policy and consent to receive updates about PROSPERA's early access program.</p>
-                </form>
+            <div class="email-form enhanced">
+                <div class="form-tabs">
+                    <button class="form-tab active" data-form="email-tab">Email</button>
+                    <button class="form-tab" data-form="wallet-tab">Wallet</button>
+                </div>
+                
+                <div class="form-tab-content active" id="email-tab">
+                    <form id="early-access-form-email">
+                        <div class="form-group">
+                            <div class="input-with-icon">
+                                <span class="input-icon">
+                                    <svg width="20" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
+                                    </svg>
+                                </span>
+                                <input type="email" class="form-control enhanced" placeholder="Enter your email address" required>
+                            </div>
+                            <button type="submit" class="form-submit enhanced pulse-animation">Apply Now</button>
+                        </div>
+                        <div class="form-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox" checked> Receive updates about early access
+                            </label>
+                        </div>
+                        <p class="privacy-text">By submitting this form, you agree to our privacy policy and consent to receive updates about PROSPERA.</p>
+                    </form>
+                </div>
+                
+                <div class="form-tab-content" id="wallet-tab">
+                    <form id="early-access-form-wallet">
+                        <div class="form-group">
+                            <div class="input-with-icon">
+                                <span class="input-icon">
+                                    <svg width="20" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V192c0-35.3-28.7-64-64-64H80c-8.8 0-16-7.2-16-16s7.2-16 16-16H448c17.7 0 32-14.3 32-32s-14.3-32-32-32H64zM416 272a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/>
+                                    </svg>
+                                </span>
+                                <input type="text" class="form-control enhanced" placeholder="Enter your wallet address" required>
+                            </div>
+                            <button type="submit" class="form-submit enhanced pulse-animation">Apply Now</button>
+                        </div>
+                        <div class="wallet-networks">
+                            <span class="wallet-network-label">Supported Networks:</span>
+                            <div class="network-icons">
+                                <span class="network-icon" title="Ethereum">ETH</span>
+                                <span class="network-icon" title="Binance Smart Chain">BSC</span>
+                                <span class="network-icon" title="Polygon">MATIC</span>
+                                <span class="network-icon" title="Solana">SOL</span>
+                            </div>
+                        </div>
+                        <p class="privacy-text">By submitting this form, you agree to our privacy policy and consent to receive updates about PROSPERA.</p>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -668,7 +823,7 @@
                             <div class="social-input-group">
                                 <span class="social-icon discord">
                                     <svg width="18" height="18" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-                                        <path d="M524.531,69.836a1.5,1.5,0,0,0-.764-.7A485.065,485.065,0,0,0,404.081,32.03a1.816,1.816,0,0,0-1.923.91,337.461,337.461,0,0,0-14.9,30.6,447.848,447.848,0,0,0-134.426,0,309.541,309.541,0,0,0-15.135-30.6,1.89,1.89,0,0,0-1.924-.91A483.689,483.689,0,0,0,116.085,69.137a1.712,1.712,0,0,0-.788.676C39.068,183.651,18.186,294.69,28.43,404.354a2.016,2.016,0,0,0,.765,1.375A487.666,487.666,0,0,0,176.02,479.918a1.9,1.9,0,0,0,2.063-.676A348.2,348.2,0,0,0,208.12,430.4a1.86,1.86,0,0,0-1.019-2.588,321.173,321.173,0,0,1-45.868-21.853,1.885,1.885,0,0,1-.185-3.126c3.082-2.309,6.166-4.711,9.109-7.137a1.819,1.819,0,0,1,1.9-.256c96.229,43.917,200.41,43.917,295.5,0a1.812,1.812,0,0,1,1.924.233c2.944,2.426,6.027,4.851,9.132,7.16a1.884,1.884,0,0,1-.162,3.126,301.407,301.407,0,0,1-45.89,21.83,1.875,1.875,0,0,0-1,2.611,391.055,391.055,0,0,0,30.014,48.815,1.864,1.864,0,0,0,2.063.7A486.048,486.048,0,0,0,610.7,405.729a1.882,1.882,0,0,0,.765-1.352C623.729,277.594,590.933,167.465,524.531,69.836ZM222.491,337.58c-28.972,0-52.844-26.587-52.844-59.239S193.056,219.1,222.491,219.1c29.665,0,53.306,26.82,52.843,59.239C275.334,310.993,251.924,337.58,222.491,337.58Zm195.38,0c-28.971,0-52.843-26.587-52.843-59.239S388.437,219.1,417.871,219.1c29.667,0,53.307,26.82,52.844,59.239C470.715,310.993,447.538,337.58,417.871,337.58Z"/>
+                                        <path d="M524.531,69.836a1.5,1.5,0,0,0-.764-.7A485.065,485.065,0,0,0,404.081,32.03a1.816,1.816,0,0,0-1.923.91,337.461,337.461,0,0,0-14.9,30.6,447.848,447.848,0,0,0-134.426,0,309.541,309.541,0,0,0-15.135-30.6,1.89,1.89,0,0,0-1.924-.91A483.689,483.689,0,0,0,116.085,69.137a1.712,1.712,0,0,0-.788.676C39.068,183.651,18.186,294.69,28.43,404.354a2.016,2.016,0,0,0,.765,1.375A487.666,487.666,0,0,0,176.02,479.918a1.9,1.9,0,0,0,2.063-.676A348.2,348.2,0,0,0,208.12,430.4a1.86,1.86,0,0,0-1.019-2.588,321.173,321.173,0,0,1-45.868-21.853,1.885,1.885,0,0,1-.185-3.126c3.082-2.309,6.166-4.711,9.109-7.137a1.819,1.819,0,0,1,1.9-.256c96.229,43.917,200.41,43.917,295.5,0a1.812,1.812,0,0,1,1.924.233c2.944,2.426,6.027,4.851,9.132,7.16a1.884,1.884,0,0,1-.162,3.126,301.407,301.407,0,0,1-45.89,21.83,1.875,1.875,0,0,0-1,2.611,391.055,391.055,0,0,0,30.014,48.815,1.864,1.864,0,0,0,2.063.7A486.048,486.048,0,0,0,610.7,405.729a1.882,1.882,0,0,0,.765-1.352C623.729,277.594,590.933,167.465,524.531,69.836ZM222.491,337.58c-28.972,0-52.844-26.587-52.844-59.239S193.056,219.1,222.491,219.1c29.665,0,53.306,26.82,52.843,59.239C275.334,310.993,251.924,337.58,222.491,337.58Zm195.38,0c-28.971,0-52.843-26.587-52.843-59.239S388.437,219.1,417.871,219.1c29.667,0,53.307,26.82,52.844,59.239C470.715,310.993,447.538,337.58,417.871,337.58Z"/>-2.309,6.166-4.711,9.109-7.137a1.819,1.819,0,0,1,1.9-.256c96.229,43.917,200.41,43.917,295.5,0a1.812,1.812,0,0,1,1.924.233c2.944,2.426,6.027,4.851,9.132,7.16a1.884,1.884,0,0,1-.162,3.126,301.407,301.407,0,0,1-45.89,21.83,1.875,1.875,0,0,0-1,2.611,391.055,391.055,0,0,0,30.014,48.815,1.864,1.864,0,0,0,2.063.7A486.048,486.048,0,0,0,610.7,405.729a1.882,1.882,0,0,0,.765-1.352C623.729,277.594,590.933,167.465,524.531,69.836ZM222.491,337.58c-28.972,0-52.844-26.587-52.844-59.239S193.056,219.1,222.491,219.1c29.665,0,53.306,26.82,52.843,59.239C275.334,310.993,251.924,337.58,222.491,337.58Zm195.38,0c-28.971,0-52.843-26.587-52.843-59.239S388.437,219.1,417.871,219.1c29.667,0,53.307,26.82,52.844,59.239C470.715,310.993,447.538,337.58,417.871,337.58Z"/>
                                     </svg>
                                 </span>
                                 <input type="text" id="discord" class="form-input social-input" placeholder="Discord username">
@@ -740,6 +895,16 @@
         </div>
     </div>
 
+    <!-- Floating Action Button -->
+    <div class="floating-cta">
+        <button class="floating-cta-button">
+            <svg width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                <path d="M144 0c-8.8 0-16 7.2-16 16V64c0 8.8 7.2 16 16 16h16c8.8 0 16-7.2 16-16V16c0-8.8-7.2-16-16-16H144zm288 0c-8.8 0-16 7.2-16 16V64c0 8.8 7.2 16 16 16h16c8.8 0 16-7.2 16-16V16c0-8.8-7.2-16-16-16H432zm-320 96c-8.8 0-16 7.2-16 16v16c0 8.8 7.2 16 16 16H592c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H112z"/>
+            </svg>
+            <span>Join Now</span>
+        </button>
+    </div>
+
     <!-- Footer -->
     <footer class="enhanced-footer">
         <div class="footer-pattern"></div>
@@ -775,20 +940,20 @@
                     <div class="footer-column">
                         <h3>Platform</h3>
                         <ul class="footer-links">
-                            <li><a href="#features">Features</a></li>
-                            <li><a href="#how-it-works">How It Works</a></li>
-                            <li><a href="#benefits">Benefits</a></li>
-                            <li><a href="#faq">FAQ</a></li>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">How It Works</a></li>
+                            <li><a href="#">Roadmap</a></li>
+                            <li><a href="#">Technology</a></li>
                         </ul>
                     </div>
                     
                     <div class="footer-column">
-                        <h3>Resources</h3>
+                        <h3>Company</h3>
                         <ul class="footer-links">
-                            <li><a href="#">Documentation</a></li>
-                            <li><a href="#">Whitepaper</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Community</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Partners</a></li>
+                            <li><a href="#">Careers</a></li>
                         </ul>
                     </div>
                     
@@ -823,50 +988,5 @@
     <!-- JavaScript -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="js/main.js"></script>
-    
-    <script>
-        // Initialize all CTA buttons to open the signup modal
-        document.addEventListener('DOMContentLoaded', function() {
-            const ctaButtons = document.querySelectorAll('#header-join-cta, #mobile-join-cta, #hero-join-cta, #benefits-join-cta, #journey-join-cta');
-            const modal = document.getElementById('signup-modal');
-            
-            ctaButtons.forEach(button => {
-                button.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    modal.classList.add('active');
-                    document.body.classList.add('modal-open');
-                });
-            });
-            
-            // Early access form submissions
-            const earlyAccessForm = document.getElementById('early-access-form');
-            if (earlyAccessForm) {
-                earlyAccessForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    modal.classList.add('active');
-                    document.body.classList.add('modal-open');
-                });
-            }
-            
-            // Simulated countdown for remaining spots
-            const spotsElement = document.getElementById('spots-remaining');
-            if (spotsElement) {
-                let spots = parseInt(spotsElement.innerText);
-                setInterval(function() {
-                    if (Math.random() > 0.7 && spots > 200) {
-                        spots--;
-                        spotsElement.innerText = spots;
-                        
-                        // Also update progress bar
-                        const progressBar = document.querySelector('.counter-progress-bar');
-                        if (progressBar) {
-                            const percentage = 100 - (spots / 500 * 100);
-                            progressBar.style.width = percentage + '%';
-                        }
-                    }
-                }, 10000);
-            }
-        });
-    </script>
 </body>
 </html>
