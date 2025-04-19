@@ -1,0 +1,551 @@
+/**
+ * PROSPERA - Quantum UI Enhancements
+ * Advanced visual effects and animations for the quantum-themed UI elements
+ */
+
+:root {
+  --quantum-glow: 0 0 20px rgba(0, 255, 0, 0.4);
+  --quantum-pulse: 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --quantum-transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ========== Quantum Card Effects ========== */
+[data-hover-effect="glow"] {
+  position: relative;
+  overflow: hidden;
+  transition: var(--quantum-transition);
+}
+
+[data-hover-effect="glow"]::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: var(--gradient-green);
+  z-index: -1;
+  opacity: 0;
+  border-radius: inherit;
+  transition: opacity 0.6s;
+}
+
+[data-hover-effect="glow"]:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--quantum-glow);
+}
+
+[data-hover-effect="glow"]:hover::before {
+  opacity: 0.15;
+}
+
+/* ========== Quantum Glowing Elements ========== */
+[data-quantum-glow="true"] {
+  position: relative;
+  z-index: 1;
+}
+
+[data-quantum-glow="true"]::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 255, 0, 0.3) 0%,
+    transparent 70%
+  );
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.8s;
+  pointer-events: none;
+}
+
+[data-quantum-glow="true"]:hover::after {
+  opacity: 0.6;
+  animation: pulse-glow 2s infinite alternate;
+}
+
+@keyframes pulse-glow {
+  0% {
+    opacity: 0.3;
+    transform: scale(0.98);
+  }
+  100% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+}
+
+/* ========== Quantum Counter Styling ========== */
+.quantum-counter {
+  background: rgba(3, 5, 8, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  border: 1px solid rgba(0, 255, 0, 0.2);
+  max-width: 400px;
+  position: relative;
+  overflow: hidden;
+  transition: var(--quantum-transition);
+}
+
+.quantum-counter:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 255, 0, 0.15);
+  border-color: rgba(0, 255, 0, 0.3);
+}
+
+.quantum-counter::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(0, 255, 0, 0.05) 0%, transparent 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.quantum-counter::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 255, 0, 0.1) 0%, transparent 70%);
+  animation: pulse-counter 4s infinite alternate;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+@keyframes pulse-counter {
+  0% {
+    opacity: 0.2;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 0.4;
+    transform: scale(1.1);
+  }
+}
+
+.counter-label {
+  color: var(--text-light);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.counter-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+#spots-remaining {
+  position: relative;
+  color: var(--success);
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+#spots-remaining.pulse {
+  animation: number-pulse 0.5s ease;
+}
+
+@keyframes number-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#spots-remaining::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--gradient-green);
+}
+
+.counter-progress {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.counter-progress-bar {
+  height: 100%;
+  background: var(--gradient-green);
+  border-radius: 8px;
+  position: relative;
+  transition: width 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.counter-progress-bar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: progress-shine 2s infinite linear;
+}
+
+@keyframes progress-shine {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* ========== Quantum Enhanced Cards ========== */
+.quantum-card {
+  position: relative;
+  overflow: hidden;
+  transition: var(--quantum-transition);
+  z-index: 1;
+}
+
+.quantum-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 255, 0, 0.1) 0%,
+    rgba(3, 5, 8, 0.8) 30%,
+    rgba(3, 5, 8, 0.8) 70%,
+    rgba(0, 255, 0, 0.1) 100%
+  );
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.4s;
+}
+
+.quantum-card:hover::before {
+  opacity: 1;
+}
+
+.quantum-card::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 255, 0, 0.15),
+    transparent 70%
+  );
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.5s, transform 0.7s;
+}
+
+.quantum-card:hover::after {
+  opacity: 0.8;
+  transform: scale(1);
+}
+
+/* ========== Quantum Transitions ========== */
+.quantum-transition {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1),
+              opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.quantum-transition[data-transition-delay="0"] {
+  transition-delay: 0.1s;
+}
+
+.quantum-transition[data-transition-delay="1"] {
+  transition-delay: 0.3s;
+}
+
+.quantum-transition[data-transition-delay="2"] {
+  transition-delay: 0.5s;
+}
+
+.quantum-transition[data-transition-delay="3"] {
+  transition-delay: 0.7s;
+}
+
+.quantum-transition[data-transition-delay="4"] {
+  transition-delay: 0.9s;
+}
+
+.animated .quantum-transition,
+.quantum-transition.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========== Quantum Countdown Timer ========== */
+.quantum-countdown {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  background: rgba(3, 5, 8, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 255, 0, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.quantum-countdown[data-quantum-effect="timeflow"]::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 255, 0, 0.05) 0%,
+    transparent 50%,
+    rgba(0, 255, 0, 0.05) 100%
+  );
+  z-index: -1;
+  animation: time-flow 8s linear infinite;
+}
+
+@keyframes time-flow {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.countdown-value {
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.countdown-value.flip-animation {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+/* ========== Quantum Data Flow Effects ========== */
+.quantum-data-particles,
+.quantum-data-visualization {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.data-flow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.data-packet {
+  position: absolute;
+  background: var(--primary);
+  border-radius: 50%;
+  left: -20px;
+  opacity: 0.6;
+  filter: blur(2px);
+  animation: flow-packet 20s linear infinite;
+}
+
+@keyframes flow-packet {
+  0% {
+    left: -20px;
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.6;
+  }
+  95% {
+    opacity: 0.6;
+  }
+  100% {
+    left: calc(100% + 20px);
+    opacity: 0;
+  }
+}
+
+.quantum-matrix {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.matrix-column {
+  position: absolute;
+  top: -100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--primary);
+  opacity: 0.3;
+  animation: matrix-flow 10s linear infinite;
+}
+
+@keyframes matrix-flow {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+.ai-analysis-grid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 60%;
+  display: grid;
+  gap: 5px;
+  opacity: 0.15;
+}
+
+.grid-cell {
+  background: rgba(0, 255, 0, 0.2);
+  border-radius: 2px;
+  animation: analyze-cell 3s ease-in-out infinite alternate;
+}
+
+@keyframes analyze-cell {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+.data-pulse-effect {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.pulse-wave {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid var(--primary);
+  opacity: 0;
+  transform: scale(0);
+  animation: pulse-wave 6s ease-out infinite;
+}
+
+@keyframes pulse-wave {
+  0% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(15);
+    opacity: 0;
+  }
+}
+
+/* ========== Media Queries ========== */
+@media (max-width: 768px) {
+  .quantum-counter {
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+  
+  .counter-value {
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .quantum-countdown {
+    padding: 1rem;
+  }
+  
+  .quantum-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .ai-analysis-grid {
+    width: 80%;
+    height: 80%;
+  }
+}
+
+/* Reduce animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .quantum-card:hover,
+  .quantum-counter:hover,
+  .quantum-transition,
+  [data-hover-effect="glow"]:hover {
+    transition: none;
+    transform: none;
+    animation: none;
+  }
+  
+  .quantum-counter::after,
+  .counter-progress-bar::before,
+  .quantum-countdown[data-quantum-effect="timeflow"]::before,
+  .data-packet,
+  .matrix-column,
+  .grid-cell,
+  .pulse-wave {
+    animation: none;
+  }
+}
